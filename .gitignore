@@ -1,13 +1,13 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/react/node_modules
+/react_chat/node_modules
 
 # testing
-/react/coverage
+/react_chat/coverage
 
 # production
-/react/build
+/react_chat/build
 
 # misc
 .DS_Store
@@ -98,20 +98,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mypy
-.mypy_cache/
-
-# IDE/Code Editor
-.idea/
-.vscode/
 
 # Local requirements
 local.txt

@@ -16,7 +16,7 @@ services:
 
   django:
     build:
-      dockerfile: chat_rest_api/Dockerfile
+      dockerfile: django_chat/Dockerfile
       context: ..
     command: python manage.py runserver 0.0.0.0:8000
     volumes:

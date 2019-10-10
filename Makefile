@@ -1,4 +1,4 @@
-COMPOSE_FILE?=chat_rest_api/docker-compose.yml
+COMPOSE_FILE?=django_chat/docker-compose.yml
 COMPOSE_CMD=docker-compose -f $(COMPOSE_FILE)
 RUN_DJANGO = $(COMPOSE_CMD) run --rm django
 RUN_DJANGO_NO_DEPS = $(COMPOSE_CMD) run --rm --no-deps django
