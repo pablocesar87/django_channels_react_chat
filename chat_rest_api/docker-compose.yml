@@ -1,0 +1,35 @@
+version: '3.5'
+services:
+  postgres:
+    image: postgres:10.7-alpine
+    environment:
+      - PGDATA=/var/lib/postgresql/data
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:5.0.3-alpine
+    expose:
+      - '6379'
+    ports:
+      - '6379:6379'
+
+  django:
+    build:
+      dockerfile: chat_rest_api/Dockerfile
+      context: ..
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - '8000:8000'
+    environment:
+      - PY_IGNORE_IMPORTMISMATCH=1
+    depends_on:
+      - postgres
+      - redis
+
+volumes:
+  pg-data:
+  static:
+  media:
