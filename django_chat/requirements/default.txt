@@ -1,4 +1,4 @@
-django==2.0
+django==2.2.13
 
 channels==2.1.5
 channels_redis==2.2.1
